@@ -7,21 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3140755F7A2ABF17C11A568A /* Pods_ShootingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */; };
 		3AD491E3230C22E400A5591A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491E2230C22E400A5591A /* AppDelegate.swift */; };
-		3AD491E5230C22E400A5591A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491E4230C22E400A5591A /* ViewController.swift */; };
 		3AD491E8230C22E400A5591A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491E6230C22E400A5591A /* Main.storyboard */; };
 		3AD491EA230C22E600A5591A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491E9230C22E600A5591A /* Assets.xcassets */; };
 		3AD491ED230C22E600A5591A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491EB230C22E600A5591A /* LaunchScreen.storyboard */; };
+		3AD491F6230C363100A5591A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491F5230C363100A5591A /* StartViewController.swift */; };
+		3AD491F8230C364600A5591A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491F7230C364600A5591A /* LoginViewController.swift */; };
+		3AD491FA230C365800A5591A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491F9230C365800A5591A /* SignUpViewController.swift */; };
+		3AD491FC230C367500A5591A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491FB230C367500A5591A /* HomeViewController.swift */; };
+		3AD491FE230C43F500A5591A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FD230C43F500A5591A /* GoogleService-Info.plist */; };
+		3AD49200230C488600A5591A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FF230C488600A5591A /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12251E2F0FEC2166D50B9185 /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD491DF230C22E400A5591A /* ShootingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD491E2230C22E400A5591A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AD491E4230C22E400A5591A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AD491E7230C22E400A5591A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AD491E9230C22E600A5591A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AD491EC230C22E600A5591A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AD491EE230C22E600A5591A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD491F4230C253700A5591A /* ShootingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShootingApp.entitlements; sourceTree = "<group>"; };
+		3AD491F5230C363100A5591A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3AD491F7230C364600A5591A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3AD491F9230C365800A5591A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3AD491FB230C367500A5591A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3AD491FD230C43F500A5591A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AD491FF230C488600A5591A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		459D6E7FDA1413132CA4BC06 /* Pods-ShootingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.release.xcconfig"; sourceTree = "<group>"; };
+		DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +44,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3140755F7A2ABF17C11A568A /* Pods_ShootingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00EDBD236FAD0F939ADBE39D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3AD491D6230C22E400A5591A = {
 			isa = PBXGroup;
 			children = (
 				3AD491E1230C22E400A5591A /* ShootingApp */,
 				3AD491E0230C22E400A5591A /* Products */,
+				F28780363B039424D13D7268 /* Pods */,
+				00EDBD236FAD0F939ADBE39D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,29 @@
 		3AD491E1230C22E400A5591A /* ShootingApp */ = {
 			isa = PBXGroup;
 			children = (
+				3AD491FD230C43F500A5591A /* GoogleService-Info.plist */,
+				3AD491F5230C363100A5591A /* StartViewController.swift */,
+				3AD491F9230C365800A5591A /* SignUpViewController.swift */,
+				3AD491F7230C364600A5591A /* LoginViewController.swift */,
+				3AD491FB230C367500A5591A /* HomeViewController.swift */,
+				3AD491F4230C253700A5591A /* ShootingApp.entitlements */,
 				3AD491E2230C22E400A5591A /* AppDelegate.swift */,
-				3AD491E4230C22E400A5591A /* ViewController.swift */,
 				3AD491E6230C22E400A5591A /* Main.storyboard */,
 				3AD491E9230C22E600A5591A /* Assets.xcassets */,
 				3AD491EB230C22E600A5591A /* LaunchScreen.storyboard */,
 				3AD491EE230C22E600A5591A /* Info.plist */,
+				3AD491FF230C488600A5591A /* logo.png */,
 			);
 			path = ShootingApp;
+			sourceTree = "<group>";
+		};
+		F28780363B039424D13D7268 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12251E2F0FEC2166D50B9185 /* Pods-ShootingApp.debug.xcconfig */,
+				459D6E7FDA1413132CA4BC06 /* Pods-ShootingApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AD491F1230C22E600A5591A /* Build configuration list for PBXNativeTarget "ShootingApp" */;
 			buildPhases = (
+				DFB80968A9147B8716DFF493 /* [CP] Check Pods Manifest.lock */,
 				3AD491DB230C22E400A5591A /* Sources */,
 				3AD491DC230C22E400A5591A /* Frameworks */,
 				3AD491DD230C22E400A5591A /* Resources */,
+				9CB5F7DF9983C5D64D29E949 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +139,11 @@
 				TargetAttributes = {
 					3AD491DE230C22E400A5591A = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD491ED230C22E600A5591A /* LaunchScreen.storyboard in Resources */,
+				3AD49200230C488600A5591A /* logo.png in Resources */,
+				3AD491FE230C43F500A5591A /* GoogleService-Info.plist in Resources */,
 				3AD491EA230C22E600A5591A /* Assets.xcassets in Resources */,
 				3AD491E8230C22E400A5591A /* Main.storyboard in Resources */,
 			);
@@ -130,13 +180,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9CB5F7DF9983C5D64D29E949 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB80968A9147B8716DFF493 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShootingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AD491DB230C22E400A5591A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD491E5230C22E400A5591A /* ViewController.swift in Sources */,
+				3AD491FC230C367500A5591A /* HomeViewController.swift in Sources */,
+				3AD491F8230C364600A5591A /* LoginViewController.swift in Sources */,
 				3AD491E3230C22E400A5591A /* AppDelegate.swift in Sources */,
+				3AD491FA230C365800A5591A /* SignUpViewController.swift in Sources */,
+				3AD491F6230C363100A5591A /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +384,10 @@
 		};
 		3AD491F2230C22E600A5591A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12251E2F0FEC2166D50B9185 /* Pods-ShootingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShootingApp/ShootingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JZ4APR6G5;
 				INFOPLIST_FILE = ShootingApp/Info.plist;
@@ -298,8 +404,10 @@
 		};
 		3AD491F3230C22E600A5591A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459D6E7FDA1413132CA4BC06 /* Pods-ShootingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShootingApp/ShootingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JZ4APR6G5;
 				INFOPLIST_FILE = ShootingApp/Info.plist;
