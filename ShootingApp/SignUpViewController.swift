@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func signUpTouched(_ sender: Any) {
-        if passwordSignUpLabel.text != rePassSignUpLabel.text {
+        if passwordSignUpTextField.text != rePasswordSignUpTextField.text {
             
             let alertController = UIAlertController(title: "Password incorrect", message: "Please retype your password", preferredStyle: .alert)
             
@@ -65,7 +65,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 
             
             }
-        }
+         }
     }
     
     // Functions or methods

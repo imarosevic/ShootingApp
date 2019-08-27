@@ -14,15 +14,13 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        nameLabel.text = "ShootingApp"
+    
     }
     
     // MARK: - Actions
