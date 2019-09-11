@@ -25,6 +25,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailLabel.text = "E-mail"
         passwordLabel.text = "Password"
         
+        emailLoginText.keyboardType = .emailAddress
+    
         emailLoginText.delegate = self
         passwordLoginText.delegate = self
         

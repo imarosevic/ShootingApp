@@ -28,6 +28,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         passwordSignUpLabel.text = "Password"
         rePassSignUpLabel.text = "Retype password"
         
+        emailSignUpTextField.keyboardType = .emailAddress
+        
         emailSignUpTextField.delegate = self
         passwordSignUpTextField.delegate = self
         rePasswordSignUpTextField.delegate = self
