@@ -18,6 +18,8 @@
 		3AD491FC230C367500A5591A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491FB230C367500A5591A /* HomeViewController.swift */; };
 		3AD491FE230C43F500A5591A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FD230C43F500A5591A /* GoogleService-Info.plist */; };
 		3AD49200230C488600A5591A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FF230C488600A5591A /* logo.png */; };
+		3AEC33022327D36B00AB034A /* NewScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC33012327D36B00AB034A /* NewScoreController.swift */; };
+		3AEC33042327D38D00AB034A /* ScoreboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC33032327D38D00AB034A /* ScoreboardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3AD491FB230C367500A5591A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3AD491FD230C43F500A5591A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AD491FF230C488600A5591A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		3AEC33012327D36B00AB034A /* NewScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScoreController.swift; sourceTree = "<group>"; };
+		3AEC33032327D38D00AB034A /* ScoreboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardController.swift; sourceTree = "<group>"; };
 		459D6E7FDA1413132CA4BC06 /* Pods-ShootingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.release.xcconfig"; sourceTree = "<group>"; };
 		DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +96,8 @@
 				3AD491EB230C22E600A5591A /* LaunchScreen.storyboard */,
 				3AD491EE230C22E600A5591A /* Info.plist */,
 				3AD491FF230C488600A5591A /* logo.png */,
+				3AEC33012327D36B00AB034A /* NewScoreController.swift */,
+				3AEC33032327D38D00AB034A /* ScoreboardController.swift */,
 			);
 			path = ShootingApp;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -200,6 +207,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +249,8 @@
 				3AD491E3230C22E400A5591A /* AppDelegate.swift in Sources */,
 				3AD491FA230C365800A5591A /* SignUpViewController.swift in Sources */,
 				3AD491F6230C363100A5591A /* StartViewController.swift in Sources */,
+				3AEC33042327D38D00AB034A /* ScoreboardController.swift in Sources */,
+				3AEC33022327D36B00AB034A /* NewScoreController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

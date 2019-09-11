@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var publishNewScore: UIButton!
+    @IBOutlet weak var viewScoreboard: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.setHidesBackButton(true, animated:true);
+     
+
+
+        
     }
     
 
@@ -26,5 +34,29 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    @IBAction func signOutTouched(_ sender: Any) {
+
+        try! Auth.auth().signOut()
+        let alertController = UIAlertController(title: "Are you sure?", message: "Do you really want to sign out?", preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Sign out", style: .destructive, handler: nil)
+        let defaultAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+        alertController.addAction(defaultAction)
+        alertController.addAction(signOutAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+        let startController = StartViewController()
+            
+        self.present(startController, animated: true, completion: nil)
+
+      
+        
+    }
+    
+    
 
 }
