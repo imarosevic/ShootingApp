@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3140755F7A2ABF17C11A568A /* Pods_ShootingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */; };
+		3A614644232A65D7006D4C88 /* 220px-Diopter_sight_picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A614643232A65D7006D4C88 /* 220px-Diopter_sight_picture.jpg */; };
 		3AD491E3230C22E400A5591A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD491E2230C22E400A5591A /* AppDelegate.swift */; };
 		3AD491E8230C22E400A5591A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491E6230C22E400A5591A /* Main.storyboard */; };
 		3AD491EA230C22E600A5591A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491E9230C22E600A5591A /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		12251E2F0FEC2166D50B9185 /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3A614643232A65D7006D4C88 /* 220px-Diopter_sight_picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "220px-Diopter_sight_picture.jpg"; path = "../../../../Downloads/220px-Diopter_sight_picture.jpg"; sourceTree = "<group>"; };
 		3AD491DF230C22E400A5591A /* ShootingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD491E2230C22E400A5591A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD491E7230C22E400A5591A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		3AD491E1230C22E400A5591A /* ShootingApp */ = {
 			isa = PBXGroup;
 			children = (
+				3A614643232A65D7006D4C88 /* 220px-Diopter_sight_picture.jpg */,
 				3AD491FD230C43F500A5591A /* GoogleService-Info.plist */,
 				3AD491F5230C363100A5591A /* StartViewController.swift */,
 				3AD491F9230C365800A5591A /* SignUpViewController.swift */,
@@ -181,6 +184,7 @@
 				3AD491FE230C43F500A5591A /* GoogleService-Info.plist in Resources */,
 				3AD491EA230C22E600A5591A /* Assets.xcassets in Resources */,
 				3AD491E8230C22E400A5591A /* Main.storyboard in Resources */,
+				3A614644232A65D7006D4C88 /* 220px-Diopter_sight_picture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
