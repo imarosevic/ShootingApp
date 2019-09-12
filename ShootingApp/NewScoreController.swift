@@ -9,8 +9,9 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import CoreLocation
 
-class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,  CLLocationManagerDelegate{
 
     @IBOutlet weak var round1: UITextField!
     @IBOutlet weak var round2: UITextField!
@@ -20,12 +21,12 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var round6: UITextField!
     @IBOutlet weak var addImage: UIButton!
     @IBOutlet weak var selectedImage: UIImageView!
-    
     @IBOutlet weak var add: UIButton!
 
     
     var ref: DatabaseReference?
     let imagePicker =  UIImagePickerController()
+    var locManager = CLLocationManager()
    
     
     override func viewDidLoad() {
@@ -41,7 +42,7 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         round6.delegate = self
         
         ref = Database.database().reference(fromURL: "https://ioshootingapp.firebaseio.com/leaderboards")
-        
+        locManager.requestWhenInUseAuthorization()
       
         
     }
@@ -124,15 +125,25 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
 
-        if let image = info[UIImagePickerController] as? UIImage {
+        if let image = info["UIImagePickerController"] as? UIImage {
             selectedImage.image = image
-    }
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
      @IBAction func addTouched(_ sender: Any) {
         
         let sum = calculate()
-       
+        var currentLocation: CLLocation!
+        
+        if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways ){
+            currentLocation = locManager.location
+        }
+        
+        let long = "\(currentLocation.coordinate.longitude)"
+        let lat = "\(currentLocation.coordinate.latitude)"
+        
         if round1.text?.isEmpty ?? true || round2.text?.isEmpty ?? true || round3.text?.isEmpty ?? true || round4.text?.isEmpty ?? true || round5.text?.isEmpty ?? true || round6.text?.isEmpty ?? true {
             print("error")
         } else {
@@ -142,10 +153,12 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                                                   "round4": round4.text!,
                                                   "round5": round5.text!,
                                                   "round6": round6.text!,
-                                                  "sum": sum])
+                                                  "sum": sum,
+                                                  "long": long,
+                                                  "lat": lat])
             
             self.performSegue(withIdentifier: "newToScoreboard", sender: self)
-//        sumResult.text = Int(round1.text!)
+
         }
 
     }
