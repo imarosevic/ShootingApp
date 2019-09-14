@@ -20,18 +20,19 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var round5: UITextField!
     @IBOutlet weak var round6: UITextField!
     @IBOutlet weak var addImage: UIButton!
-    @IBOutlet weak var selectedImage: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var add: UIButton!
 
     
     var ref: DatabaseReference?
-    let imagePicker =  UIImagePickerController()
+    var imagePicker: UIImagePickerController!
     var locManager = CLLocationManager()
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        round1.keyboardType = .numberPad
+
         
         
         round1.delegate = self
@@ -41,8 +42,9 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         round5.delegate = self
         round6.delegate = self
         
-        ref = Database.database().reference(fromURL: "https://ioshootingapp.firebaseio.com/leaderboards")
+        ref = Database.database().reference().child("results")
         locManager.requestWhenInUseAuthorization()
+        
       
         
     }
@@ -71,96 +73,91 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         return convertText
     }
     
+    
     // UITextFieldDelegate Methods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         hidekeyboard()
         return true
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didfinishpickingImage info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+        imageView.image = info[.originalImage] as? UIImage
+        
+    }
+    
     @IBAction func addImageTouched(_ sender: Any) {
         
-    
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func openCamera()
-    {
-         imagePicker.delegate = self
-
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
-        {
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        else
-        {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    func openGallary()
-    {
+        imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        imagePicker.sourceType = .camera
         
-        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        imagePicker.allowsEditing = true
-        self.present(imagePicker, animated: true, completion: nil)
-    }
+        present(imagePicker, animated: true, completion: nil)
+        
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
 
-        if let image = info["UIImagePickerController"] as? UIImage {
-            selectedImage.image = image
-        }
-        
-        dismiss(animated: true, completion: nil)
     }
     
+
+ 
      @IBAction func addTouched(_ sender: Any) {
         
+        let key = (ref?.childByAutoId().key)!
         let sum = calculate()
+        let userN = NSFullUserName()
         var currentLocation: CLLocation!
+        let imageName = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("\(imageName).png")
         
-        if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways ){
-            currentLocation = locManager.location
-        }
-        
-        let long = "\(currentLocation.coordinate.longitude)"
-        let lat = "\(currentLocation.coordinate.latitude)"
-        
-        if round1.text?.isEmpty ?? true || round2.text?.isEmpty ?? true || round3.text?.isEmpty ?? true || round4.text?.isEmpty ?? true || round5.text?.isEmpty ?? true || round6.text?.isEmpty ?? true {
-            print("error")
-        } else {
-            self.ref?.childByAutoId().setValue(["round1": round1.text!,
-                                                  "round2": round2.text!,
-                                                  "round3": round3.text!,
-                                                  "round4": round4.text!,
-                                                  "round5": round5.text!,
-                                                  "round6": round6.text!,
-                                                  "sum": sum,
-                                                  "long": long,
-                                                  "lat": lat])
+        if let uploadData = self.imageView.image?.jpegData(compressionQuality: 0.1){
+            print("UPLOAD DATA: ")
+            print(uploadData)
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+    
             
-            self.performSegue(withIdentifier: "newToScoreboard", sender: self)
+                if error != nil {
+                print(error!)
+                return
+            }
+                storageRef.downloadURL(completion: {(url, error) in
+                    if error != nil {
+                        print("Failed to download url:", error!)
+                        return
+                    }
+                    
+                    let imageURL = url?.absoluteString
+                    
+            if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways ){
+                currentLocation = self.locManager.location
+            }
+            
+            let long = "\(currentLocation.coordinate.longitude)"
+            let lat = "\(currentLocation.coordinate.latitude)"
+        
+        
+            
+            if self.round1.text?.isEmpty ?? true || self.round2.text?.isEmpty ?? true || self.round3.text?.isEmpty ?? true || self.round4.text?.isEmpty ?? true || self.round5.text?.isEmpty ?? true || self.round6.text?.isEmpty ?? true {
+                print("error")
+            } else {
+                self.ref?.child(key).setValue(["sum": sum,
+                                                "long": long,
+                                                "lat": lat,
+                                                "photoURL": imageURL,
+                                                "name": userN,
+                                                "id": key])
+                
+                
+            }
+        })
+        
+        self.performSegue(withIdentifier: "newToScoreboard", sender: self)
 
-        }
 
-    }
+    })
 }
+}
+}
+
 

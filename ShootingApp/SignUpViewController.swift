@@ -33,8 +33,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailSignUpTextField.delegate = self
         passwordSignUpTextField.delegate = self
         rePasswordSignUpTextField.delegate = self
-
-        // Do any additional setup after loading the view.
+        
+       
     }
     
     // MARK: - Actions
