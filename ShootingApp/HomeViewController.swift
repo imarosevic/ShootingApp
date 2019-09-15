@@ -28,21 +28,29 @@ class HomeViewController: UIViewController {
         self.performSegue(withIdentifier: "homeToScoreboard", sender: self)
     }
     
-    @IBAction func signOutTouched(_ sender: Any) {
+    @IBAction func signOut(_ sender: Any) {
+    
+        
+        do{
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "logoutSegue", sender: self)
+        }catch{
+            print("Error while signing out!")
+        }
 
-        try! Auth.auth().signOut()
-        let alertController = UIAlertController(title: "Are you sure?", message: "Do you really want to sign out?", preferredStyle: .actionSheet)
-        
-        let signOutAction = UIAlertAction(title: "Sign out", style: .destructive, handler: nil)
-        let defaultAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-        alertController.addAction(defaultAction)
-        alertController.addAction(signOutAction)
-        self.present(alertController, animated: true, completion: nil)
-        
-        let startController = StartViewController()
-            
-        self.present(startController, animated: true, completion: nil)
+//        try! Auth.auth().signOut()
+//        let alertController = UIAlertController(title: "Are you sure?", message: "Do you really want to sign out?", preferredStyle: .actionSheet)
+//
+//        let signOutAction = UIAlertAction(title: "Sign out", style: .destructive, handler: nil)
+//        let defaultAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        alertController.addAction(defaultAction)
+//        alertController.addAction(signOutAction)
+//        self.present(alertController, animated: true, completion: nil)
+//
+//        let startController = StartViewController()
+//
+//        self.present(startController, animated: true, completion: nil)
 
       
         

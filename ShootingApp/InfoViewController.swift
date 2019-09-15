@@ -7,34 +7,68 @@
 //
 
 import UIKit
+import MapKit
 
 class InfoViewController: UIViewController {
 
-    @IBOutlet weak var infoUrlLabel: UILabel!
-    @IBOutlet weak var infoLatLabel: UILabel!
-    @IBOutlet weak var infoLongLabel: UILabel!
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var mapView: MKMapView!
     
     var myString1: String = ""
     var myString2: String = ""
     var myString3: String = ""
+    var locationManager: CLLocationManager!
+    var regionalRadius: CLLocationDistance = 5000
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        infoUrlLabel.text = myString1
-        infoLatLabel.text = myString2
-        infoLongLabel.text = myString3
+        let lat = Double(myString2)
+        let long = Double(myString3)
+        
+        if let url = NSURL(string: myString1) {
+            if let data = NSData(contentsOf: url as URL){
+                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+                imageView.image = UIImage(data: data as Data)
+            }
+        }
+
+    
+        
+        let resultLocation = CLLocation(latitude: lat!, longitude: long!)
+        
+        centerMapOnLocation(location: resultLocation)
+        
+        let homePin = MKPointAnnotation()
+        homePin.coordinate = CLLocationCoordinate2D(latitude: resultLocation.coordinate.latitude, longitude: resultLocation.coordinate.longitude)
+        
+        self.mapView.addAnnotation(homePin)
+        
+        locationManager = CLLocationManager()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionalRadius, longitudinalMeters: regionalRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
-    */
+    
+    
+}
 
+extension InfoViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if (annotation is MKUserLocation){
+            return nil
+        }else {
+            
+            let an: MKAnnotationView = MKAnnotationView()
+            an.image = UIImage(named: "blabla")
+            return an
+        }
+    }
 }
