@@ -106,7 +106,7 @@ class NewScoreController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         let key = (ref?.childByAutoId().key)!
         let sum = calculate()
-        let userN = NSFullUserName()
+        let userN = Auth.auth().currentUser?.email
         var currentLocation: CLLocation!
         let imageName = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child("\(imageName).png")

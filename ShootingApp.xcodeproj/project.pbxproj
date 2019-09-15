@@ -20,9 +20,10 @@
 		3AD491FE230C43F500A5591A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FD230C43F500A5591A /* GoogleService-Info.plist */; };
 		3AD49200230C488600A5591A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD491FF230C488600A5591A /* logo.png */; };
 		3AEC33022327D36B00AB034A /* NewScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC33012327D36B00AB034A /* NewScoreController.swift */; };
-		3AEC33042327D38D00AB034A /* ScoreboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC33032327D38D00AB034A /* ScoreboardController.swift */; };
-		3AFD83FC232D304D00E2A655 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD83FB232D304D00E2A655 /* MapViewController.swift */; };
 		3AFD8400232D3D6300E2A655 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD83FF232D3D6300E2A655 /* Result.swift */; };
+		3AFD8404232E50F600E2A655 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD8403232E50F600E2A655 /* ViewControllerTableViewCell.swift */; };
+		3AFD8406232E52E900E2A655 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD8405232E52E900E2A655 /* ScoreboardViewController.swift */; };
+		3AFD8408232E643200E2A655 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD8407232E643200E2A655 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +43,10 @@
 		3AD491FD230C43F500A5591A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AD491FF230C488600A5591A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		3AEC33012327D36B00AB034A /* NewScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScoreController.swift; sourceTree = "<group>"; };
-		3AEC33032327D38D00AB034A /* ScoreboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardController.swift; sourceTree = "<group>"; };
-		3AFD83FB232D304D00E2A655 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3AFD83FF232D3D6300E2A655 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3AFD8403232E50F600E2A655 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		3AFD8405232E52E900E2A655 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
+		3AFD8407232E643200E2A655 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		459D6E7FDA1413132CA4BC06 /* Pods-ShootingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.release.xcconfig"; sourceTree = "<group>"; };
 		DE1F3FA5D5B104C5AB5D70EE /* Pods_ShootingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,14 +101,15 @@
 				3AD491FB230C367500A5591A /* HomeViewController.swift */,
 				3AD491F4230C253700A5591A /* ShootingApp.entitlements */,
 				3AD491E2230C22E400A5591A /* AppDelegate.swift */,
+				3AFD8403232E50F600E2A655 /* ViewControllerTableViewCell.swift */,
 				3AD491E6230C22E400A5591A /* Main.storyboard */,
-				3AFD83FB232D304D00E2A655 /* MapViewController.swift */,
+				3AFD8407232E643200E2A655 /* InfoViewController.swift */,
 				3AD491E9230C22E600A5591A /* Assets.xcassets */,
 				3AD491EB230C22E600A5591A /* LaunchScreen.storyboard */,
 				3AD491EE230C22E600A5591A /* Info.plist */,
 				3AD491FF230C488600A5591A /* logo.png */,
 				3AEC33012327D36B00AB034A /* NewScoreController.swift */,
-				3AEC33032327D38D00AB034A /* ScoreboardController.swift */,
+				3AFD8405232E52E900E2A655 /* ScoreboardViewController.swift */,
 			);
 			path = ShootingApp;
 			sourceTree = "<group>";
@@ -255,14 +258,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD491FC230C367500A5591A /* HomeViewController.swift in Sources */,
+				3AFD8406232E52E900E2A655 /* ScoreboardViewController.swift in Sources */,
 				3AD491F8230C364600A5591A /* LoginViewController.swift in Sources */,
+				3AFD8404232E50F600E2A655 /* ViewControllerTableViewCell.swift in Sources */,
+				3AFD8408232E643200E2A655 /* InfoViewController.swift in Sources */,
 				3AD491E3230C22E400A5591A /* AppDelegate.swift in Sources */,
 				3AD491FA230C365800A5591A /* SignUpViewController.swift in Sources */,
 				3AD491F6230C363100A5591A /* StartViewController.swift in Sources */,
 				3AFD8400232D3D6300E2A655 /* Result.swift in Sources */,
-				3AEC33042327D38D00AB034A /* ScoreboardController.swift in Sources */,
 				3AEC33022327D36B00AB034A /* NewScoreController.swift in Sources */,
-				3AFD83FC232D304D00E2A655 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

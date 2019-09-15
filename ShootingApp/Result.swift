@@ -9,18 +9,22 @@
 import Foundation
 
 class Result {
-    var key: String
-    var sumResult: Int
-    var lat: String
-    var long: String
-    var profileImageURL: String
     
-    init(dictionary: [String: AnyObject], key: String) {
-        self.key = key
-        self.sumResult = dictionary["sumResult"] as! Int
-        self.lat = dictionary["lat"] as! String
-        self.long = dictionary["long"] as! String
-        self.profileImageURL = dictionary["profileImageURL"] as! String
+    var id: String?
+    var name: String?
+    var imageURL: String?
+    var sumResult: String?
+    var long: String?
+    var lat: String?
+    
+    init(id: String?, name: String?, imageURL: String?, sumResult: String?, long: String?, lat: String?) {
+        self.id = id
+        self.name = name
+        self.imageURL = imageURL
+        self.sumResult = sumResult
+        self.long = long
+        self.lat = lat
+        
     }
 
 }
